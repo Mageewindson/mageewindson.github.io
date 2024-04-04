@@ -237,12 +237,24 @@
 <script>
     window.Offer18WebSDK.activateDebugMode();
 </script>
-   <script>
-    window.Offer18WebSDK.trackConversion({
-        domain: 'testinvalid.o18.link',
-        accountId: '3872',
-         isGlobalPixel: true,
-    });
+<script>
+window.Offer18WebSDK.trackConversion({
+domain: '10329696.o18.link',
+accountId: '3872',
+isGlobalPixel: true, // true or false
+allowMultiConversion: false, // true or false
+conversionData: {
+event: '', // Event Name (Please specify the event)
+payout: '', // Payout Amount (Please specify the payout amount)
+sale: '', // Sale Amount (Please specify the sale amount)
+currency: '',
+adv_sub1: '',
+adv_sub2: '',
+adv_sub3: '',
+adv_sub4: '',
+adv_sub5: '',
+}
+})
 </script>
 </body>
 
