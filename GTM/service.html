@@ -29,36 +29,19 @@
 
 <body>
   <script>
-    // Function to get URL parameters by name
-    function getParameterByName(name) {
-      const url = window.location.href;
-      const paramName = name.replace(/[\[\]]/g, '\\$&');
-      const regex = new RegExp('[?&]' + paramName + '(=([^&#]*)|&|#|$)');
-      const results = regex.exec(url);
+  const getParameterByName = name => new URLSearchParams(window.location.search).get(name);
+  const affId = getParameterByName('aff_id'), offerId = getParameterByName('offer_id');
 
-      if (!results) return null;
-      if (!results[2]) return '';
-      return decodeURIComponent(results[2].replace(/\+/g, ' '));
-    }
-
-    // Get aff_id and offer_id from URL
-    const affId = getParameterByName('aff_id');
-    const offerId = getParameterByName('offer_id');
-
-    // Check if both aff_id and offer_id exist
-    if (affId && offerId) {
-      // Replace placeholders in the URL with aff_id and offer_id
-      const scriptUrl = `https://web-resources-dyn.offer18a.net/sdk/web/WebRTG.js?t=ao&a=${affId}&o=${offerId}`;
-
-      // Create a script element to dynamically load the URL
-      const scriptElement = document.createElement('script');
-      scriptElement.src = scriptUrl;
-      scriptElement.async = true; // Optional: load asynchronously
-      document.body.appendChild(scriptElement); // Append script to the body
-    } else {
-      console.log('retargeting - offer18 - aff_id or offer_id is missing in the URL');
-    }
-  </script>
+  if (affId && offerId) {
+    const scriptUrl = `https://web-resources-dyn.offer18a.net/sdk/web/WebRTG.js?t=ao&a=${affId}&o=${offerId}`;
+    const scriptElement = document.createElement('script');
+    scriptElement.src = scriptUrl;
+    scriptElement.async = true;
+    document.body.appendChild(scriptElement);
+  } else {
+    console.log('retargeting - offer18 - aff_id or offer_id is missing in the URL');
+  }
+</script>
     <!-- Navbar Start -->
     <div class="container-fluid bg-white position-relative">
         <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
