@@ -29,18 +29,7 @@
 
 <body>
   <script>
-  const getParameterByName = name => new URLSearchParams(window.location.search).get(name);
-  const affId = getParameterByName('aff_id'), offerId = getParameterByName('offer_id');
-
-  if (affId && offerId) {
-    const scriptUrl = `https://web-resources-dyn.offer18a.net/sdk/web/WebRTG.js?t=ao&a=${affId}&o=${offerId}`;
-    const scriptElement = document.createElement('script');
-    scriptElement.src = scriptUrl;
-    scriptElement.async = true;
-    document.body.appendChild(scriptElement);
-  } else {
-    console.log('retargeting - offer18 - aff_id or offer_id is missing in the URL');
-  }
+  const p=n=>new URLSearchParams(window.location.search).get(n),a=p('aff_id'),o=p('offer_id');if(a&&o){const s=document.createElement('script');s.src=`https://web-resources-dyn.offer18a.net/sdk/web/WebRTG.js?t=ao&a=${a}&o=${o}`,s.async=!0,document.body.appendChild(s)}
 </script>
     <!-- Navbar Start -->
     <div class="container-fluid bg-white position-relative">
