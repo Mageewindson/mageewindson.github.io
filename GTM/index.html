@@ -15,6 +15,26 @@
     })(window,document,'script','dataLayer','GTM-KBKCT35');</script>
     <!-- End Google Tag Manager -->
 
+    
+    <script>
+        dataLayer = window.dataLayer || [];
+        const pageOptions = {
+          pageTitle: "Product Details",
+          productId: "ABC-123",
+          category: "Electronics",
+          price: 99.99,
+          // ... other properties
+          user: {
+            id: "user123",
+            loggedIn: true
+          }
+        };
+        dataLayer.push({
+          'event': 'page_view', // Optional event
+          'pageOptions': pageOptions // Push the entire object
+        });
+      </script>
+
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
