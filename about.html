@@ -4,14 +4,18 @@
 <html lang="en">
    <head>
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-W5FM48W');</script>
+})(window,document,'script','dataLayer','GTM-W5FM48W');</script> -->
 <!-- End Google Tag Manager -->
       <!-- basic -->
       <meta charset="utf-8">
+<script src="https://web-resources.offer18.net/sdk/web/WebSDK.js"></script>
+<script>
+    window.Offer18WebSDK.initializeConversion('click_id');
+</script>
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <!-- mobile metas -->
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -194,9 +198,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5FM48W"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W5FM48W"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
 <!-- End Google Tag Manager (noscript) -->
+<script>
+    window.Offer18WebSDK.trackConversion({
+        domain: 'testinvalid.o18.link',
+        accountId: '3872',
+        offerId: '6597212',
+    });
+</script>
    </body>
 </html>
 
