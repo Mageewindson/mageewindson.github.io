@@ -3,13 +3,14 @@
 <head>
     
     <meta charset="utf-8">
-    <script src="https://web-resources.offer18.net/sdk/web/WebSDK.js"></script>
-    <script>
+<!--     <script src="https://web-resources.offer18.net/sdk/web/WebSDK.js"></script> -->
+    
+ <script>
+       window.Offer18WebSDK.initializeConversion('tid', { trackUserJourney: true });
+</script> 
+<script>
     window.Offer18WebSDK.activateDebugMode();
 </script>
-<!--     <script>
-       window.Offer18WebSDK.initializeConversion('tid', { trackUserJourney: true });
-</script> -->
     <title>DOT.NET - Digital Agency Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
