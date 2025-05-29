@@ -4,6 +4,10 @@
 <head>
  
     <meta charset="utf-8">
+ <script src="https://web-resources.offer18.net/sdk/web/WebSDK.js"></script>
+ <script>
+    window.Offer18WebSDK.activateDebugMode();
+</script>
     <title>DOT.NET - Digital Agency Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
@@ -204,6 +208,24 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+ <script>
+      window.Offer18WebSDK.trackConversion({
+          domain: 'davinder-pre-release-live.o18-test.com/tracking/',
+          accountId: '7559',
+          offerId: '21654213', 
+          coupon:'',
+          postbackType: '', // 'iframe' or 'pixel'
+          isGlobalPixel: false, // true or false
+          allowMultiConversion: false, // true or false
+          conversionData: {
+              adv_sub1: '{aff_sub1}',
+              adv_sub2: '{aff_sub2}',
+              adv_sub3: '{aff_sub3}',
+              adv_sub4: '{aff_sub4}',
+              adv_sub5: '{aff_sub5}',
+          }
+      })
+  </script>
 </body>
 
 </html>
