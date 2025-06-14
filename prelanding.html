@@ -15,7 +15,7 @@
     function createQueryString(mapping) { let queryString = Object.keys(mapping).map(key => { let value = getQueryParam(key); return value ? `${mapping[key]}=${value}` : ''; }).filter(param => param !== '').join('&'); return queryString; }
     var landing_page = getUrlParam('landing_page');
     var aurl = document.getElementsByTagName('a'), ahf = aurl.length;
-    var parameterMapping = { 'aff_click_id': 'aff_click_id', 'sub_aff_id': 'sub_aff_id', 'aff_sub1': 'aff_sub1', 'aff_sub2': 'aff_sub2', 'aff_sub3': 'aff_sub3', 'aff_sub4': 'aff_sub4', 'aff_sub5': 'aff_sub5', 'googleaid': 'googleaid', 'deviceid': 'deviceid', 'iosidfa': 'iosidfa', 'source': 'source' };
+    var parameterMapping = { 'aff_click_id': 'aff_click_id', 'sub_aff_id': 'sub_aff_id', 'aff_sub1': 'aff_sub1', 'aff_sub2': 'aff_sub2', 'aff_sub3': 'aff_sub3', 'aff_sub4': 'aff_sub4', 'aff_sub5': 'aff_sub5', 'googleaid': 'googleaid', 'deviceid': 'deviceid', 'iosidfa': 'iosidfa', 'source': 'source', 'aff_sub8': 'aff_sub8'  };
     var parameterString = '';
     if (Object.keys(parameterMapping).length > 0) { parameterString = createQueryString(parameterMapping); }
     while (ahf--) { if (parameterString) { aurl[ahf].setAttribute('href', `${landing_page}&${parameterString}`); } else { aurl[ahf].setAttribute('href', landing_page); } aurl[ahf].setAttribute('target', '_blank'); }
