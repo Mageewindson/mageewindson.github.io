@@ -3,52 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Simple Landing Page</title>
+  <title>Beauty Landing Page</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #4facfe, #00f2fe);
-      color: #fff;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .hero {
+      background-image: url('https://source.unsplash.com/1600x900/?beauty,model'); /* Replace with your own image URL if needed */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
+      position: relative;
+      color: white;
       text-align: center;
     }
-    h1 {
-      font-size: 3em;
-      margin-bottom: 0.5em;
+
+    .overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
     }
-    p {
-      font-size: 1.2em;
-      max-width: 600px;
-      margin-bottom: 2em;
+
+    .content {
+      position: relative;
+      z-index: 2;
     }
+
     .cta-button {
-      background-color: #ffffff;
-      color: #4facfe;
-      border: none;
-      padding: 1em 2em;
+      margin-top: 20px;
+      background-color: #ff69b4;
+      color: white;
+      padding: 15px 30px;
       font-size: 1.2em;
-      border-radius: 8px;
       text-decoration: none;
+      border: none;
+      border-radius: 8px;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: background-color 0.3s ease;
     }
+
     .cta-button:hover {
-      background-color: #e0e0e0;
+      background-color: #ff85c1;
     }
   </style>
 </head>
 <body>
 
-  <h1>Welcome to Our Offer</h1>
-  <p>Get exclusive access to our latest product and special deals by clicking the button below.</p>
-
-  <!-- CTA Button -->
-  <a href="webeasyhit.com/cf/click" class="cta-button">Click Here</a>
+  <div class="hero">
+    <div class="overlay"></div>
+    <div class="content">
+      <h1>Reveal Your Inner Beauty</h1>
+      <a href="webeasyhit.com/cf/click" class="cta-button">Click Here</a>
+    </div>
+  </div>
 
 </body>
 </html>
