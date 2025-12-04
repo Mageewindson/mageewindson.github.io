@@ -6,7 +6,7 @@
       <script>
     window.Offer18WebSDK.initializeConversion('clickid');
 </script> -->
-      <script src="https://mnpt-local-dev.o18-test.com/folders/Resources/sdk/web/WebSDK.js?982326"></script>
+      <script src="https://mnpt-local-dev.o18-test.com/folders/Resources/sdk/web/WebSDK.js?9926"></script>
       <!-- <script>
          window.Offer18WebSDK.activateDebugMode();
     window.Offer18WebSDK.initializeConversion('tid');
@@ -15,12 +15,12 @@
   window.Offer18WebSDK.activateDebugMode();
   window.Offer18WebSDK.init({
     automatedTracking: true,
-    triggerType: "hostname",
+    triggerType: "referral",
     operations: [
       {
-        triggerValue: "mageewindson.github.io",
+        triggerValue: "mageewindson",
         triggerFunction: "initializeConversion",
-         triggerMode: "equal",
+         triggerMode: "contain",
         triggerConfig: {
           clickIdParameter: "tid"
         }
@@ -468,6 +468,7 @@
       <script src="js/custom.js"></script>
    </body>
 </html>
+
 
 
 
