@@ -166,5 +166,25 @@
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
+       <script>
+    window.Offer18WebSDK.activateDebugMode();
+    window.Offer18WebSDK.init({
+      automatedTracking: true,
+      triggerType: "path",
+      operations: [
+        {
+          triggerValue: "/blog.html",
+          triggerFunction: "trackConversion",
+          triggerConfig: {
+            domain: 'testinvalid.o18.link',
+            accountId: '3872',
+            offerId: '6597212',
+            postbackType: 'ajax',
+          }
+        }
+      ]
+    })
+  </script>
    </body>
 </html>
+
