@@ -6,6 +6,22 @@
       <script>
     window.Offer18WebSDK.initializeConversion('clickid');
 </script> -->
+      <script src="https://mnpt-local-dev.o18-test.com/folders/Resources/sdk/web/WebSDK.js?12345">
+      <script>
+  window.Offer18WebSDK.activateDebugMode();
+  window.Offer18WebSDK.init({
+    automatedTracking: true,
+    triggerType: "path",
+    operations: [
+      {
+        triggerValue: "/secDomain/click.html",
+        triggerFunction: "initializeConversion",
+        triggerConfig: {
+          clickIdParameter: "tid"
+        }
+      }]
+  })
+</script>
       <meta charset="utf-8">
                   <script type="text/javascript" src="//my5cx.ttrk.io/postback.js"></script>
       <img src="//my5cx.ttrk.io/postback?format=img&sum={replace}" width="1" height="1" />
@@ -447,3 +463,4 @@
       <script src="js/custom.js"></script>
    </body>
 </html>
+
