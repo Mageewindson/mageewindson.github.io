@@ -6,7 +6,7 @@
       <script>
     window.Offer18WebSDK.initializeConversion('clickid');
 </script> -->
-      <script src="https://mnpt-local-dev.o18-test.com/folders/Resources/sdk/web/WebSDK.js?799156"></script>
+      <script src="https://mnpt-local-dev.o18-test.com/folders/Resources/sdk/web/WebSDK.js?199156"></script>
       <!-- <script>
          window.Offer18WebSDK.activateDebugMode();
     window.Offer18WebSDK.initializeConversion('tid');
@@ -20,6 +20,11 @@ window.Offer18WebSDK.init({
           triggerFunction: "initializeConversion",
           triggerCondtions: [
             { mode: "contain", type: "path", value: "index" },
+          ],
+            [
+        {
+          triggerFunction: "initializeConversion",
+          triggerCondtions: [
             { mode: "equal", type: "hostname", value: "mageewindson.github.io" }
           ],
           triggerConfig: {
@@ -476,6 +481,7 @@ window.Offer18WebSDK.init({
       <script src="js/custom.js"></script>
    </body>
 </html>
+
 
 
 
