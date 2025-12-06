@@ -6,26 +6,29 @@
       <script>
     window.Offer18WebSDK.initializeConversion('clickid');
 </script> -->
-      <script src="https://mnpt-local-dev.o18-test.com/folders/Resources/sdk/web/WebSDK.js?698226"></script>
+      <script src="https://mnpt-local-dev.o18-test.com/folders/Resources/sdk/web/WebSDK.js?694526"></script>
       <!-- <script>
          window.Offer18WebSDK.activateDebugMode();
     window.Offer18WebSDK.initializeConversion('tid');
 </script> -->
       <script>
-  window.Offer18WebSDK.activateDebugMode();
   window.Offer18WebSDK.init({
-    automatedTracking: true,
-    triggerType: "path",
-    operations: [
-      {
-        triggerValue: "Dozecafe",
-        triggerFunction: "initializeConversion",
-         triggerMode: "contain",
-        triggerConfig: {
-          clickIdParameter: "tid"
+      automatedTracking: true,
+      operations: [
+        {
+          triggerFunction: "initializeConversion",
+          triggerCondtions: [
+            { mode: "contain", type: "hostname", value: "github" }
+          ],
+          triggerConfig: {
+            clickIdParameter: "tid",
+            configuration: {         
+              trackUserJourney: false   
+            }                         
+          }
         }
-        }]
-  })
+      ]
+    })
 </script>
       <meta charset="utf-8">
                   <script type="text/javascript" src="//my5cx.ttrk.io/postback.js"></script>
@@ -471,6 +474,7 @@
       <script src="js/custom.js"></script>
    </body>
 </html>
+
 
 
 
