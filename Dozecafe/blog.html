@@ -166,18 +166,18 @@
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
-        <script src="https://mnpt-local-dev.o18-test.com/folders/Resources/sdk/web/WebSDK.js?28705"></script>
+        <script src="https://mnpt-local-dev.o18-test.com/folders/Resources/sdk/web/WebSDK.js?2844705"></script>
        <script>
-    window.Offer18WebSDK.activateDebugMode();
-    window.Offer18WebSDK.init({
+window.Offer18WebSDK.activateDebugMode();
+  window.Offer18WebSDK.init({
       automatedTracking: true,
-      triggerType: "hostname",
       operations: [
         {
-          triggerValue: "github",
           triggerFunction: "trackConversion",
-          triggerMode: "contain",
-           triggerConfig: {
+          triggerCondtions: [
+            { mode: "contain", type: "hostname", value: "github.io" }
+          ],
+          triggerConfig: {
             domain: 'testinvalid.o18.link',
             accountId: '3872',
             offerId: '21848226',
@@ -189,3 +189,4 @@
   </script>
    </body>
 </html>
+
