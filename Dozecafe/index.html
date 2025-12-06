@@ -6,7 +6,7 @@
       <script>
     window.Offer18WebSDK.initializeConversion('clickid');
 </script> -->
-      <script src="https://web-resources.offer18.net/sdk/web/WebSDK.js?test"></script>
+      <script src="https://web-resources.offer18.net/sdk/web/WebSDK.js?test56"></script>
       <!-- <script>
          window.Offer18WebSDK.activateDebugMode();
     window.Offer18WebSDK.initializeConversion('tid');
@@ -14,30 +14,23 @@
     <script>
        window.Offer18WebSDK.activateDebugMode();
 window.Offer18WebSDK.init({
-  automatedTracking: true,
-  operations: [
-    {
-      triggerFunction: "trackClick",
-      triggerConditions: [
-        { mode: "equal", type: "path", value: "/Dozecafe/index.html" }
-      ],
-      triggerConfig: {
-        trackingURL: 'https://testinvalid.o18.click/c?o=21848226&m=3872',
-        keymapping: ['a:utm_source']
-      }
-    },
-    {
-      triggerFunction: "trackImpression",
-      triggerConditions: [
-        { mode: "contain", type: "hostname", value: "github" }
-      ],
-      triggerConfig: {
-        impressionURL: 'https://testinvalid.o18.click/i?o=21848226&m=3872',
-        keymapping: ['a:utm_source']
-      }
-    }
-  ]
-})
+      automatedTracking: true,
+      operations: [
+        {
+          triggerFunction: "initializeConversion",
+          triggerConditions: [
+            { mode: "contain", type: "path", value: "index" },
+            { mode: "equal", type: "hostname", value: "mageewindson.github.io" }
+          ],
+          triggerConfig: {
+            clickIdParameter: "tid",
+            configuration: {         
+              trackUserJourney: false   
+            }                         
+          }
+        }
+      ]
+    })
     </script>
       <meta charset="utf-8">
                   <script type="text/javascript" src="//my5cx.ttrk.io/postback.js"></script>
@@ -483,6 +476,7 @@ window.Offer18WebSDK.init({
       <script src="js/custom.js"></script>
    </body>
 </html>
+
 
 
 
