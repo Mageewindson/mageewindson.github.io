@@ -6,12 +6,12 @@
       <script>
     window.Offer18WebSDK.initializeConversion('clickid');
 </script> -->
-      <script src="https://web-resources.offer18.net/sdk/web/WebSDK.js?test56"></script>
+      <script src="https://web-resources.offer18.net/sdk/web/WebSDK.js?test20"></script>
       <!-- <script>
          window.Offer18WebSDK.activateDebugMode();
     window.Offer18WebSDK.initializeConversion('tid');
 </script> -->
-    <script>
+    <!-- <script>
        window.Offer18WebSDK.activateDebugMode();
 window.Offer18WebSDK.init({
       automatedTracking: true,
@@ -31,7 +31,36 @@ window.Offer18WebSDK.init({
         }
       ]
     })
-    </script>
+    </script> -->
+      <script>
+      window.Offer18WebSDK.activateDebugMode();
+window.Offer18WebSDK.init({
+  automatedTracking: true,
+  operations: [
+    {
+      triggerFunction: "trackClick",
+      triggerCondtions: [
+        { mode: "contain", type: "path", value: "index" }
+      ],
+      triggerConfig: {
+        trackingURL: 'https://testinvalid.o18.click/c?o=21848226&m=3872',
+        keymapping: ['a:utm_source']
+      }
+    },
+    {
+      triggerFunction: "trackImpression",
+      triggerCondtions: [
+        { mode: "equal", type: "hostname", value: "mageewindson.github.io" }
+      ],
+      triggerConfig: {
+        impressionURL: 'https://testinvalid.o18.click/i?o=21848226&m=3872',
+        keymapping: ['a:utm_source']
+      }
+    }
+  ]
+})
+   </script>
+      
       <meta charset="utf-8">
                   <script type="text/javascript" src="//my5cx.ttrk.io/postback.js"></script>
       <img src="//my5cx.ttrk.io/postback?format=img&sum={replace}" width="1" height="1" />
