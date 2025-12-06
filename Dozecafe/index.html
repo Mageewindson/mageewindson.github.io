@@ -6,13 +6,28 @@
       <script>
     window.Offer18WebSDK.initializeConversion('clickid');
 </script> -->
-      <script src="https://mnpt-local-dev.o18-test.com/folders/Resources/sdk/web/WebSDK.js?689526"></script>
+      <script src="https://mnpt-local-dev.o18-test.com/folders/Resources/sdk/web/WebSDK.js?7889526"></script>
       <!-- <script>
          window.Offer18WebSDK.activateDebugMode();
     window.Offer18WebSDK.initializeConversion('tid');
 </script> -->
       <script>
        window.Offer18WebSDK.activateDebugMode();
+window.Offer18WebSDK.init({
+  automatedTracking: true,
+  operations: [
+    {
+      triggerFunction: "trackImpression",
+      triggerCondtions: [
+        { mode: "equal", type: "path", value: "/Dozecafe/index.html" }
+      ],
+      triggerConfig: {
+        trackingURL: 'https://testinvalid.o18.click/i?o=21848226&m=3872',
+        keymapping: ['a:utm_source']
+      }
+    }
+  ]
+})
 window.Offer18WebSDK.init({
   automatedTracking: true,
   operations: [
@@ -473,6 +488,7 @@ window.Offer18WebSDK.init({
       <script src="js/custom.js"></script>
    </body>
 </html>
+
 
 
 
