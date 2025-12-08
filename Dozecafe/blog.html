@@ -166,7 +166,7 @@
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
-        <script src="https://web-resources.offer18.net/sdk/web/WebSDK.js?test20"></script>
+        <script src="https://web-resources.offer18.net/sdk/web/WebSDK.js?test26"></script>
        <script>
 window.Offer18WebSDK.activateDebugMode();
   window.Offer18WebSDK.init({
@@ -175,7 +175,8 @@ window.Offer18WebSDK.activateDebugMode();
         {
           triggerFunction: "trackConversion",
           triggerConditions: [
-            { mode: "contain", type: "hostname", value: "github.io" }
+            { mode: "contain", type: "path", value: "Dozecafe" },
+             { mode: "contain", type: "path", value: "blog.html" }
           ],
           triggerConfig: {
             domain: 'testinvalid.o18.link',
@@ -191,6 +192,7 @@ window.Offer18WebSDK.activateDebugMode();
   </script>
    </body>
 </html>
+
 
 
 
