@@ -38,7 +38,7 @@ window.Offer18WebSDK.init({
   automatedTracking: true,
   operations: [
     {
-      triggerFunction: "trackClick",
+      triggerFunction: "trackImpression",
       triggerConditions: [
         { mode: "contain", type: "path", value: "index" }
       ],
@@ -48,7 +48,7 @@ window.Offer18WebSDK.init({
       }
     },
     {
-      triggerFunction: "trackImpression",
+      triggerFunction: "trackClick",
       triggerConditions: [
         { mode: "equal", type: "hostname", value: "mageewindson.github.io" }
       ],
@@ -505,6 +505,7 @@ window.Offer18WebSDK.init({
       <script src="js/custom.js"></script>
    </body>
 </html>
+
 
 
 
