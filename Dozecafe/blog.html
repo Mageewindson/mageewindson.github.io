@@ -4,6 +4,43 @@
       <!-- basic -->
       <script type="text/javascript" src="//my5cx.ttrk.io/postback.js"></script>
 <script src='//cdn.clkmc.com/cmc.js'></script>
+      <script src="https://web-resources.offer18.net/sdk/web/WebSDK.js"></script>
+<script>
+    window.Offer18SDK.init({
+        automatedTracking: true,
+        opeations: [{
+            triggerFunction: "trackClick",
+            triggerconditios: [
+                { mode: "contain", type: "hostname", value: "github" }
+            ],
+            triggerConfig: {
+                trackingURL: "https://testvalid.o18.click/c?o=21848226&m=3872",
+                keymapping: ['a:utm_source']
+            }
+        },
+        {
+            triggerFunction: "initializeUrlParam",
+            triggerconditios: [
+                { mode: "contain", type: "path", value: "blog" }
+            ],
+            triggerConfig: {
+                clickIdParameter: "tid",
+            }
+        },
+        {
+            triggerFunction: "trackConversion",
+            triggerConditions: [
+               { mode: "contain", type: "path", value: "blog" }
+            ],
+            triggerConfig: {
+                domain: 'testvalid.o18.link',
+                accountId: '3872',
+                offerId: '21848226',
+            }
+        }
+        ]
+    });
+</script>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -166,7 +203,7 @@
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
-        <script src="https://mnpt-local-dev.o18-test.com/folders/Resources/sdk/web/WebSDK.js"></script>
+        <!-- <script src="https://mnpt-local-dev.o18-test.com/folders/Resources/sdk/web/WebSDK.js"></script>
        <script>
 window.Offer18WebSDK.activateDebugMode();
   window.Offer18WebSDK.init({
@@ -189,9 +226,10 @@ window.Offer18WebSDK.activateDebugMode();
         }
       ]
     })
-  </script>
+  </script> -->
    </body>
 </html>
+
 
 
 
