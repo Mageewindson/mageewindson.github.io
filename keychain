@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Keychains & Charms Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #ff6f91;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .card a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: white;
+            background-color: #ff6f91;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .card a:hover {
+            background-color: #ff3f6c;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #222;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Beautiful Keychains & Charms</h1>
+    <p>Explore stylish accessories for bags, keys, and gifts</p>
+</header>
+
+<section class="container">
+
+    <div class="card">
+        <img src="https://picsum.photos/400/300?random=1" alt="Cute Keychain">
+        <h3>Cute Cartoon Keychain</h3>
+        <p>A colorful cartoon keychain perfect for backpacks and keys.</p>
+        <a href="https://example.com/cartoon-keychain" target="_blank">View Product</a>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/400/300?random=2" alt="Metal Charm">
+        <h3>Metal Star Charm</h3>
+        <p>Elegant metal charm with a shiny finish for a classy look.</p>
+        <a href="https://example.com/metal-charm" target="_blank">Read More</a>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/400/300?random=3" alt="Handmade Keychain">
+        <h3>Handmade Beaded Keychain</h3>
+        <p>Handcrafted beaded keychain, unique and stylish.</p>
+        <a href="https://example.com/handmade-keychain" target="_blank">Buy Now</a>
+    </div>
+
+    <div class="card">
+        <img src="https://picsum.photos/400/300?random=4" alt="Charm Set">
+        <h3>Charm Gift Set</h3>
+        <p>A lovely charm set ideal for gifting on special occasions.</p>
+        <a href="https://example.com/charm-set" target="_blank">Explore</a>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Keychains & Charms Blog | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
