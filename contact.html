@@ -6,7 +6,7 @@
       <!-- basic -->
       <meta charset="utf-8">
   <meta charset="utf-8">
-    <script>
+    <!-- <script>
 (function () {
   try {
     // Read UTM from URL
@@ -36,7 +36,21 @@
     console.error('UTM tracking error:', e);
   }
 })();
+</script> -->
+      <script>
+  (function () {
+    const utmSource = localStorage.getItem('utm_source') || 'direct';
+    console.log('UTM on contact page:', utmSource);
+
+    const script = document.createElement('script');
+    script.src =
+      'https://tracking-69896faab32fd.plat-clicks.com/conversion.js?cid=' +
+      encodeURIComponent(utmSource);
+
+    document.body.appendChild(script);
+  })();
 </script>
+
 
       <!-- <script type="text/javascript" src="https://tracking-69896faab32fd.plat-clicks.com/conversion.js?cid={utm_source}"></script>
       <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
@@ -250,6 +264,7 @@
 </script>
    </body>
 </html>
+
 
 
 
