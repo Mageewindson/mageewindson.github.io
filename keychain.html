@@ -119,6 +119,18 @@
 <footer>
     <p>© 2026 Keychains & Charms Blog</p>
 </footer>
+    <script>
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    const utmSource = params.get('utm_source');
+
+    if (utmSource) {
+      localStorage.setItem('utm_source', utmSource);
+      console.log('Stored utm_source:', utmSource);
+    }
+  })();
+</script>
+
 
 </body>
 </html>
