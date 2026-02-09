@@ -5,22 +5,22 @@
       
       <!-- basic -->
       <meta charset="utf-8">
-    <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const params = new URLSearchParams(window.location.search);
-    const utmSource = params.get('utm_source') || '';
+      <script>
+(function () {
+  const utmSource = localStorage.getItem('utm_source') || 'direct';
+  console.log('Using utmSource for conversion:', utmSource);
 
-    console.log('UTM Source:', utmSource);
+  const s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src =
+    'https://tracking-69896faab32fd.plat-clicks.com/conversion.js?cid=' +
+    encodeURIComponent(utmSource);
 
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src =
-      'https://tracking-69896faab32fd.plat-clicks.com/conversion.js?cid=' +
-      encodeURIComponent(utmSource);
-
-    document.body.appendChild(script);
-  });
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
 </script>
+
 
 
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -470,6 +470,7 @@
       
    </body>
 </html>
+
 
 
 
