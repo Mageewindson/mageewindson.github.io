@@ -7,12 +7,23 @@
       <meta charset="utf-8">
   <meta charset="utf-8">
     <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const params = new URLSearchParams(window.location.search);
-    const utmSource = params.get('utm_source') || '';
+(function () {
+  try {
+    // Read UTM from URL
+    const query = window.location.search;
+    console.log('Query string:', query);
 
-    console.log('UTM Source:', utmSource);
+    const params = new URLSearchParams(query);
+    let utmSource = params.get('utm_source');
 
+    // Fallback if missing
+    if (!utmSource) {
+      utmSource = 'direct';
+    }
+
+    console.log('Final utmSource:', utmSource);
+
+    // Load conversion script
     const script = document.createElement('script');
     script.type = 'text/javascript';
     script.src =
@@ -20,8 +31,13 @@
       encodeURIComponent(utmSource);
 
     document.body.appendChild(script);
-  });
+
+  } catch (e) {
+    console.error('UTM tracking error:', e);
+  }
+})();
 </script>
+
       <!-- <script type="text/javascript" src="https://tracking-69896faab32fd.plat-clicks.com/conversion.js?cid={utm_source}"></script>
       <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
       <!-- mobile metas -->
@@ -234,6 +250,7 @@
 </script>
    </body>
 </html>
+
 
 
 
