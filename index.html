@@ -5,7 +5,37 @@
       
       <!-- basic -->
       <meta charset="utf-8">
-            <script type="text/javascript" src="https://tracking-69896faab32fd.plat-clicks.com/conversion.js?cid={utm_source}"></script>
+      <!-- <script>
+  function getUTM(name) {
+    const params = new URLSearchParams(window.location.search);
+    return params.get(name);
+  }
+
+  window.utmData = {
+    utm_source: getUTM('utm_source'),
+    utm_medium: getUTM('utm_medium'),
+    utm_campaign: getUTM('utm_campaign'),
+    utm_term: getUTM('utm_term'),
+    utm_content: getUTM('utm_content')
+  };
+
+  console.log('UTM data:', window.utmData);
+</script> -->
+
+<script>
+  // Read utm_source from URL
+  const params = new URLSearchParams(window.location.search);
+  const utmSource = params.get('utm_source') || '';
+
+  // Create script dynamically
+  const script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://tracking-69896faab32fd.plat-clicks.com/conversion.js?cid=' 
+               + encodeURIComponent(utmSource);
+
+  // Append script to page
+  document.head.appendChild(script);
+</script>
 
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <!-- mobile metas -->
@@ -454,6 +484,7 @@
       
    </body>
 </html>
+
 
 
 
