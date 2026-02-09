@@ -98,8 +98,19 @@
       These accessories are affordable, customizable, and make excellent gifts.
       Their compact size and stylish designs make them a timeless choice.
     </p>
-
     <script>
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    const utmSource = params.get('utm_source');
+
+    if (utmSource) {
+      localStorage.setItem('utm_source', utmSource);
+      console.log('Stored utm_source:', utmSource);
+    }
+  })();
+</script>
+
+    <!-- <script>
 (function () {
   try {
     // Read UTM from URL
@@ -129,7 +140,7 @@
     console.error('UTM tracking error:', e);
   }
 })();
-</script>
+</script> -->
 
   </div>
 </body>
