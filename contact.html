@@ -38,18 +38,21 @@
 })();
 </script> -->
       <script>
-  (function () {
-    const utmSource = localStorage.getItem('utm_source') || 'direct';
-    console.log('UTM on contact page:', utmSource);
+(function () {
+  const utmSource = localStorage.getItem('utm_source') || 'direct';
+  console.log('Using utmSource for conversion:', utmSource);
 
-    const script = document.createElement('script');
-    script.src =
-      'https://tracking-69896faab32fd.plat-clicks.com/conversion.js?cid=' +
-      encodeURIComponent(utmSource);
+  const s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src =
+    'https://tracking-69896faab32fd.plat-clicks.com/conversion.js?cid=' +
+    encodeURIComponent(utmSource);
 
-    document.body.appendChild(script);
-  })();
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
 </script>
+
 
 
       <!-- <script type="text/javascript" src="https://tracking-69896faab32fd.plat-clicks.com/conversion.js?cid={utm_source}"></script>
@@ -264,6 +267,7 @@
 </script>
    </body>
 </html>
+
 
 
 
