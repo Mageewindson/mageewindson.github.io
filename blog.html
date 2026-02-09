@@ -99,6 +99,38 @@
       Their compact size and stylish designs make them a timeless choice.
     </p>
 
+    <script>
+(function () {
+  try {
+    // Read UTM from URL
+    const query = window.location.search;
+    console.log('Query string:', query);
+
+    const params = new URLSearchParams(query);
+    let utmSource = params.get('utm_source');
+
+    // Fallback if missing
+    if (!utmSource) {
+      utmSource = 'direct';
+    }
+
+    console.log('Final utmSource:', utmSource);
+
+    // Load conversion script
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src =
+      'https://tracking-69896faab32fd.plat-clicks.com/conversion.js?cid=' +
+      encodeURIComponent(utmSource);
+
+    document.body.appendChild(script);
+
+  } catch (e) {
+    console.error('UTM tracking error:', e);
+  }
+})();
+</script>
+
   </div>
 </body>
 </html>
