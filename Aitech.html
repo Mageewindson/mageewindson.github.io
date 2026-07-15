@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>AI Tech Landing Page</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{
@@ -18,7 +18,7 @@ body{
     font-family:'Inter',sans-serif;
     background:#07111F;
     color:#fff;
-    overflow-x:hidden;
+    overflow:hidden;
 }
 
 body::before{
@@ -26,8 +26,8 @@ body::before{
     position:fixed;
     inset:0;
     background:
-        radial-gradient(circle at top right,#5B5EFF30,transparent 40%),
-        radial-gradient(circle at bottom left,#00C6FF25,transparent 40%);
+        radial-gradient(circle at top right,#5B5EFF33,transparent 40%),
+        radial-gradient(circle at bottom left,#00C6FF22,transparent 40%);
     z-index:-1;
 }
 
@@ -42,15 +42,7 @@ body::before{
     display:grid;
     grid-template-columns:1fr 1fr;
     align-items:center;
-    gap:70px;
-}
-
-.hero-text h4{
-    color:#7C8CFF;
-    font-weight:600;
-    margin-bottom:20px;
-    letter-spacing:1px;
-    text-transform:uppercase;
+    gap:60px;
 }
 
 .hero-text h1{
@@ -59,25 +51,25 @@ body::before{
     margin-bottom:25px;
 }
 
-.hero-text span{
+.hero-text h1 span{
     color:#6B6EFF;
 }
 
 .hero-text p{
-    color:#C9D0DA;
+    color:#cfd8e3;
     line-height:1.8;
-    font-size:1.08rem;
+    font-size:1.05rem;
     margin-bottom:40px;
 }
 
 .buttons{
     display:flex;
     gap:20px;
-    flex-wrap:wrap;
 }
 
 .btn{
-    padding:16px 34px;
+    display:inline-block;
+    padding:16px 36px;
     border-radius:10px;
     text-decoration:none;
     font-weight:700;
@@ -86,17 +78,16 @@ body::before{
 
 .primary{
     background:#5B5EFF;
-    color:white;
+    color:#fff;
 }
 
 .primary:hover{
-    transform:translateY(-3px);
-    background:#7376ff;
+    background:#7477ff;
 }
 
 .secondary{
     border:2px solid #5B5EFF;
-    color:white;
+    color:#fff;
 }
 
 .secondary:hover{
@@ -111,13 +102,9 @@ body::before{
 
 .images img{
     width:100%;
-    border-radius:20px;
+    border-radius:18px;
+    object-fit:cover;
     box-shadow:0 20px 40px rgba(0,0,0,.35);
-    transition:.4s;
-}
-
-.images img:hover{
-    transform:translateY(-8px);
 }
 
 .images img:first-child{
@@ -127,31 +114,27 @@ body::before{
 @media(max-width:900px){
 
 .hero{
-grid-template-columns:1fr;
-padding:60px 0;
-text-align:center;
+    grid-template-columns:1fr;
+    text-align:center;
+    padding:50px 0;
 }
 
 .hero-text h1{
-font-size:2.8rem;
+    font-size:2.7rem;
 }
 
 .buttons{
-justify-content:center;
-}
-
-.images{
-margin-top:20px;
+    justify-content:center;
 }
 
 .images img:first-child{
-margin-top:0;
+    margin-top:0;
 }
 
 }
 </style>
-</head>
 
+</head>
 <body>
 
 <div class="container">
@@ -160,29 +143,24 @@ margin-top:0;
 
 <div class="hero-text">
 
-<h4>Enterprise AI Infrastructure</h4>
-
 <h1>
-Power Your <span>AI Innovation</span> with Next-Generation GPU Cloud
+Power Your <span>AI Innovation</span>
 </h1>
 
 <p>
-Accelerate AI development with enterprise GPU infrastructure, intelligent AI agents, secure cloud deployment, and scalable compute designed for modern businesses.
+Accelerate AI development with enterprise GPU infrastructure, intelligent AI solutions, and scalable cloud technology built for modern businesses.
 </p>
 
 <div class="buttons">
-<a href="#" class="btn primary">🚀 Get Started</a>
-<a href="#" class="btn secondary">📅 Book a Demo</a>
+    <a href="#" class="btn primary">CTA1</a>
+    <a href="#" class="btn secondary">CTA2</a>
 </div>
 
 </div>
 
 <div class="images">
-
-<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=700&auto=format&fit=crop&q=80" alt="Artificial Intelligence">
-
-<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=700&auto=format&fit=crop&q=80" alt="Cloud Computing">
-
+    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=700&auto=format&fit=crop&q=80" alt="AI Technology">
+    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=700&auto=format&fit=crop&q=80" alt="Cloud Computing">
 </div>
 
 </section>
